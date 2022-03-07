@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="theme-color" content="#ffffff">
+    <title>提问列表 - MDClub</title>
+    <link rel="stylesheet" href="https://cdn.w3cbus.com/community.mdclub.org/static/theme/material/index.eea5d0d6.css">
+</head>
+<body class="mdui-drawer-body-left">
+<div class="mdui-appbar-with-toolbar mg-app">
+
+    <div class="mc-appbar mdui-appbar mdui-appbar-fixed">
+        <div class="toolbar mdui-toolbar">
+            <button class="drawer mdui-btn mdui-btn-icon mdui-ripple">
+                <i class="mdui-icon material-icons">menu</i>
+            </button>
+            <a class="headline" href="/">MDClub</a>
+            <div class="title">首页</div>
+            <form method="get" class="search-bar">
+                <button type="button" class="back mdui-btn mdui-btn-icon">
+                    <i class="mdui-icon material-icons mdui-text-color-theme-icon">arrow_back</i>
+                </button>
+                <button type="submit" class="submit mdui-btn mdui=btn-icon">
+                    <i class="mdui-icon material-icons mdui-text-color-theme-icon">search</i>
+                </button>
+                <input type="text" placeholder="搜索文章与问答">
+                <button type="button" class="cancel mdui-btn mdui-btn-icon">
+                    <i class="mdui-icon material-icons mdui-text-color-theme-icon">close</i>
+                </button>
+            </form>
+            <div class="mdui-toolbar-spacer"></div>
+            <div class="login mdui-btn mdui-btn-dense">登录</div>
+            <div class="register mdui-btn mdui-btn-dense">注册</div>
+        </div>
+    </div>
+    <div class="mc-drawer mdui-drawer">
+        <div class="mdui-list">
+            <a class="mdui-list-item mdui-ripple mdui-list-item-active" href="/">
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content">首页</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="/topics">
+                <i class="mdui-list-item-icon mdui-icon material-icons">class</i>
+                <div class="mdui-list-item-content">话题</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="/questions">
+                <i class="mdui-list-item-icon mdui-icon material-icons">forum</i>
+                <div class="mdui-list-item-content">问答</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="/articles">
+                <i class="mdui-list-item-icon mdui-icon material-icons">description</i>
+                <div class="mdui-list-item-content">文章</div>
+            </a>
+            <div class="mdui-divider"></div>
+            <a class="mdui-list-item mdui-ripple" href="/users">
+                <i class="mdui-list-item-icon mdui-icon material-icons">people</i>
+                <div class="mdui-list-item-content">人脉</div>
+            </a>
+        </div>
+        <div class="copyright">
+            <p>Powered by <a href="https://mdui.org" target="_blank">MDUI</a> &amp; <a href="https://mdclub.org" target="_blank">MDClub</a></p>
+        </div>
+    </div>
+
+    <div class="mc-editor maximize with-title with-topics" id="page-questions-editor">
+        <div class="header">
+            <div class="header-title">新提问</div>
+            <div class="header-actions">
+                <i class="mdui-icon material-icons" title="最小化">remove</i>
+                <i class="mdui-icon material-icons" title="全屏模式">fullscreen_exit</i>
+                <i class="mdui-icon material-icons" title="保存为草稿并关闭">close</i>
+            </div>
+        </div>
+        <div class="body">
+            <input class="editor-title mdui-text-color-theme-text" placeholder="请输入标题">
+            <div class="editor-topics">
+                <span class="placeholder" title="点击添加话题">请至少选择 1 个话题</span>
+                <button class="add mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple" title="点击添加话题">
+                    <i class="mdui-icon material-icons mdui-text-color-theme-icon">add</i>
+                </button>
+            </div>
+            <div class="editor-content mdui-text-color-theme-text mdui_editor-content mdui-typo mdui_editor-content-empty" contenteditable="" placeholder="请输入内容">
+                <p>
+                    <br>
+                </p>
+            </div>
+            <div class="editor-toolbar mdui_editor-toolbar">
+                <button class="submit mdui-btn mdui-btn-raised mdui-color-theme">发布</button>
+                <button class="mdui-btn mdui_editor-toolbar-menu mdui_editor-toolbar-menu-bold" type="button" title="粗体">
+                    <i class="mdui-icon material-icons">format_bold</i>
+                </button>
+                <button class="mdui-btn mdui_editor-toolbar-menu mdui_editor-toolbar-menu-italic" type="button" title="斜体">
+                    <i class="mdui-icon material-icons">format_italic</i>
+                </button>
+                <button class="mdui-btn mdui_editor-toolbar-menu mdui_editor-toolbar-menu-head" type="button" title="标题">
+                    <i class="mdui-icon material-icons">title</i>
+                </button>
+                <button class="mdui-btn mdui_editor-toolbar-menu mdui_editor-toolbar-menu-code" type="button" title="代码块">
+                    <i class="mdui-icon material-icons">code</i>
+                </button>
+                <button class="mdui-btn mdui_editor-toolbar-menu mdui_editor-toolbar-menu-ol" type="button" title="有序列表">
+                    <i class="mdui-icon material-icons">format_list_numbered</i>
+                </button>
+                <button class="mdui-btn mdui_editor-toolbar-menu mdui_editor-toolbar-menu-ul" type="button" title="无序列表">
+                    <i class="mdui-icon material-icons">format_list_bulleted</i>
+                </button>
+                <button class="mdui-btn mdui_editor-toolbar-menu mdui_editor-toolbar-menu-link" type="button" title="插入链接">
+                    <i class="mdui-icon material-icons">link</i>
+                </button>
+                <button class="mdui-btn mdui_editor-toolbar-menu mdui_editor-toolbar-menu-image" type="button" title="插入图片">
+                    <i class="mdui-icon material-icons">image</i>
+                </button>
+                <input type="file" id="_2c76b9fb-de74-9e0c-abfe-b0ee356cf5d2" name="image" accept="image/png, image/jpeg, image/gif">
+                <div class="mdui-toolbar-spacer"></div>
+                <button class="mdui-btn mdui_editor-toolbar-menu mdui_editor-toolbar-menu-clear_drafts" type="button" title="舍弃草稿">
+                    <i class="mdui-icon material-icons">delete</i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.w3cbus.com/community.mdclub.org/static/theme/material/index.33adc672.js"></script>
+</div>
+</body>
+</html>
