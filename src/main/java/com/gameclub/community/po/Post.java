@@ -22,12 +22,21 @@ public class Post {
     private int postTypeId;
     private String content;
     private Date createTime;
+    private Date updateTime;
     private int viewNum;
     private int commentNum;
     private int hotNum;
     private int likeNum;
 
     public Post() {
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 
     public int getId() {
