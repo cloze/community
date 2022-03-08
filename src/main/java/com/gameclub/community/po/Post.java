@@ -17,18 +17,61 @@ public class Post {
     /**
      * post user id
      */
-    private int postUserId;
-    private String title;
-    private int postTypeId;
-    private String content;
-    private Date createTime;
-    private Date updateTime;
-    private int viewNum;
-    private int commentNum;
-    private int hotNum;
-    private int likeNum;
+    private int postAuthor;//发帖者
+    private String title;//标题
+    private int postTypeId;//帖子类型
+    private int tagId;//标签类型
+    private String content;//正文
+    private String image;//图片
+    private int commentId;//评论者
+    private Date createTime;//创建时间
+    private Date updateTime;//更新时间
+    private int viewNum;//浏览数
+    private int commentNum;//评论数
+    private int likeNum;//点赞数
+    private int collectNum;//收藏数
 
     public Post() {
+    }
+
+    public int getPostAuthor() {
+        return postAuthor;
+    }
+
+    public void setPostAuthor(int postAuthor) {
+        this.postAuthor = postAuthor;
+    }
+
+    public int getTagId() {
+        return tagId;
+    }
+
+    public void setTagId(int tagId) {
+        this.tagId = tagId;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public int getCommentId() {
+        return commentId;
+    }
+
+    public void setCommentId(int commentId) {
+        this.commentId = commentId;
+    }
+
+    public int getCollectNum() {
+        return collectNum;
+    }
+
+    public void setCollectNum(int collectNum) {
+        this.collectNum = collectNum;
     }
 
     public Date getUpdateTime() {
@@ -45,14 +88,6 @@ public class Post {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getPostUserId() {
-        return postUserId;
-    }
-
-    public void setPostUserId(int postUserId) {
-        this.postUserId = postUserId;
     }
 
     public String getTitle() {
@@ -101,14 +136,6 @@ public class Post {
 
     public void setCommentNum(int commentNum) {
         this.commentNum = commentNum;
-    }
-
-    public int getHotNum() {
-        return hotNum;
-    }
-
-    public void setHotNum(int hotNum) {
-        this.hotNum = hotNum;
     }
 
     public int getLikeNum() {
