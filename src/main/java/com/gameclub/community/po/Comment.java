@@ -14,9 +14,14 @@ public class Comment {
     private int postId;//帖子
     private int userId;//回复者
     private Date comTime;//评论时间
+
+    /**
+     * 修改时间，也可存放删除时间
+     */
+    private Date updateTime;
+
     private int likeNum;//点赞数
     private int dislikeNum;//
-    private String image;//图片
 
     public Comment() {
     }
@@ -67,13 +72,5 @@ public class Comment {
 
     public void setDislikeNum(int dislikeNum) {
         this.dislikeNum = dislikeNum;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 }

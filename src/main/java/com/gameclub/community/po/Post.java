@@ -1,6 +1,7 @@
 package com.gameclub.community.po;
 
 import java.sql.Date;
+import java.util.List;
 
 /**
  * @ClassName Post
@@ -15,71 +16,33 @@ public class Post {
     private int id;
 
     /**
-     * post user id
+     * 发帖者
      */
-    private int postAuthor;//发帖者
+    private int postAuthor;
+
     private String title;//标题
     private int postTypeId;//帖子类型
-    private int tagId;//标签类型
+    private List<Integer> tagId;//标签类型
     private String content;//正文
-    private String image;//图片
-    private int commentId;//评论者
+
+    /**
+     * 评论信息，评论中包含评论者等信息
+     */
+    private List<Comment> comments;
+
     private Date createTime;//创建时间
+
     private Date updateTime;//更新时间
+
     private int viewNum;//浏览数
+
     private int commentNum;//评论数
+
     private int likeNum;//点赞数
+
     private int collectNum;//收藏数
 
     public Post() {
-    }
-
-    public int getPostAuthor() {
-        return postAuthor;
-    }
-
-    public void setPostAuthor(int postAuthor) {
-        this.postAuthor = postAuthor;
-    }
-
-    public int getTagId() {
-        return tagId;
-    }
-
-    public void setTagId(int tagId) {
-        this.tagId = tagId;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public int getCommentId() {
-        return commentId;
-    }
-
-    public void setCommentId(int commentId) {
-        this.commentId = commentId;
-    }
-
-    public int getCollectNum() {
-        return collectNum;
-    }
-
-    public void setCollectNum(int collectNum) {
-        this.collectNum = collectNum;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
     }
 
     public int getId() {
@@ -88,6 +51,14 @@ public class Post {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getPostAuthor() {
+        return postAuthor;
+    }
+
+    public void setPostAuthor(int postAuthor) {
+        this.postAuthor = postAuthor;
     }
 
     public String getTitle() {
@@ -106,6 +77,14 @@ public class Post {
         this.postTypeId = postTypeId;
     }
 
+    public List<Integer> getTagId() {
+        return tagId;
+    }
+
+    public void setTagId(List<Integer> tagId) {
+        this.tagId = tagId;
+    }
+
     public String getContent() {
         return content;
     }
@@ -114,12 +93,28 @@ public class Post {
         this.content = content;
     }
 
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
     public Date getCreateTime() {
         return createTime;
     }
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 
     public int getViewNum() {
@@ -144,5 +139,13 @@ public class Post {
 
     public void setLikeNum(int likeNum) {
         this.likeNum = likeNum;
+    }
+
+    public int getCollectNum() {
+        return collectNum;
+    }
+
+    public void setCollectNum(int collectNum) {
+        this.collectNum = collectNum;
     }
 }
