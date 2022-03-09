@@ -4,14 +4,26 @@ import java.util.Date;
 
 /**
  * @ClassName Tag
- * @Description TODO
+ * @Description 标签
  * @Author YCDN
  * @Date 2022/3/8 21:07
  * @Version 1.0
  */
 public class Tag {
-    private String tagName;//标签
-    private Date createTime;//时间
+    //TODO:2022/03/09 注释
+    private int id;
+    /**
+     * 标签名
+     */
+    private String tagName;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Tag() {
     }
@@ -22,13 +34,5 @@ public class Tag {
 
     public void setTagName(String tagName) {
         this.tagName = tagName;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
     }
 }

@@ -1,19 +1,34 @@
 package com.gameclub.community.po;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @ClassName Type
- * @Description TODO
+ * @Description 类型
  * @Author YCDN
  * @Date 2022/3/8 21:06
  * @Version 1.0
  */
 public class Type {
-    private String typeName;//类型
-    private Date createTime;//时间
+    //TODO:2022/03/09 注释
+    private int id;
+    /**
+     *类型名
+     */
+    private String typeName;
 
     public Type() {
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTypeName() {
@@ -24,11 +39,4 @@ public class Type {
         this.typeName = typeName;
     }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
 }

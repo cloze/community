@@ -1,29 +1,87 @@
 package com.gameclub.community.po;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 /**
  * @ClassName Comment
- * @Description TODO
+ * @Description 评论
  * @Author YCDN
  * @Date 2022/3/8 21:01
  * @Version 1.0
  */
 public class Comment {
-    private String content;//回复内容
-    private int postId;//帖子
-    private int userId;//回复者
-    private Date comTime;//评论时间
-
+    private int id;
+    /**
+     * 回复内容
+     */
+    private String content;
+    /**
+     * 帖子
+     */
+    private int postId;
+    /**
+     * 评论时间
+     */
+    private Date comTime;
     /**
      * 修改时间，也可存放删除时间
      */
     private Date updateTime;
+    /**
+     * 点赞数
+     */
+    private int likeNum;
 
-    private int likeNum;//点赞数
-    private int dislikeNum;//
+    /**
+     * 头像
+     */
+    private String avatar;
+
+    /**
+     * 昵称
+     */
+    private String nickName;
+
+    /**
+     * 版块
+     */
+    private int sessionId;
+
 
     public Comment() {
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public String getContent() {
@@ -42,14 +100,6 @@ public class Comment {
         this.postId = postId;
     }
 
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
     public Date getComTime() {
         return comTime;
     }
@@ -66,11 +116,11 @@ public class Comment {
         this.likeNum = likeNum;
     }
 
-    public int getDislikeNum() {
-        return dislikeNum;
+    public int getSessionId() {
+        return sessionId;
     }
 
-    public void setDislikeNum(int dislikeNum) {
-        this.dislikeNum = dislikeNum;
+    public void setSessionId(int sessionId) {
+        this.sessionId = sessionId;
     }
 }

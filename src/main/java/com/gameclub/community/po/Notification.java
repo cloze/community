@@ -4,21 +4,50 @@ import java.util.Date;
 
 /**
  * @ClassName Notification
- * @Description TODO
+ * @Description 通知
  * @Author YCDN
  * @Date 2022/3/8 21:13
  * @Version 1.0
  */
 public class Notification {
-    private String commenter;//评论者
-    private String comTargetName;//评论的帖子
-    private String liker;//点赞者
-    private String likeTargetName;//点赞的帖子
-    private String collector;//收藏者
-    private String colTargetName;//收藏的帖子
-    private Date commentTime;//评论时间
-    private Date likeTime;//点赞时间
-    private Date collectTime;//收藏时间
+    private int id;
+    /**
+     * 评论者
+     */
+    private String commenter;
+    /**
+     * 评论的帖子
+     */
+    private String comTargetName;
+    /**
+     * 点赞者
+     */
+    private String liker;
+    /**
+     * 点赞的帖子
+     */
+    private String likeTargetName;
+    /**
+     * 收藏者
+     */
+    private String collector;
+    /**
+     * 收藏的帖子
+     */
+    private String colTargetName;
+    /**
+     * 评论时间
+     */
+    private Date commentTime;
+    /**
+     * 点赞时间
+     */
+    private Date likeTime;
+    /**
+     * 收藏时间
+     */
+    private Date collectTime;
+
 
     public Notification() {
     }

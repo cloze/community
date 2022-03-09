@@ -1,11 +1,11 @@
 package com.gameclub.community.po;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 /**
  * @ClassName Post
- * @Description TODO
+ * @Description 帖子
  * @Author YCDN
  * @Date 2022/3/5 15:35
  * @Version 1.0
@@ -14,35 +14,68 @@ public class Post {
 
     // TODO: 2022/3/7 注释都加下
     private int id;
-
     /**
      * 发帖者
      */
     private int postAuthor;
-
-    private String title;//标题
-    private int postTypeId;//帖子类型
-    private List<Integer> tagId;//标签类型
-    private String content;//正文
-
+    /**
+     * 标题
+     */
+    private String title;
+    /**
+     * 帖子类型
+     */
+    private int postTypeId;
+    /**
+     * 标签类型
+     */
+    private List<Integer> tagId;
+    /**
+     * 版块名称
+     */
+    private int sessionId;
+    /**
+     * 正文
+     */
+    private String content;
     /**
      * 评论信息，评论中包含评论者等信息
      */
     private List<Comment> comments;
-
-    private Date createTime;//创建时间
-
-    private Date updateTime;//更新时间
-
-    private int viewNum;//浏览数
-
-    private int commentNum;//评论数
-
-    private int likeNum;//点赞数
-
-    private int collectNum;//收藏数
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+    /**
+     * 浏览数
+     */
+    private int viewNum;
+    /**
+     * 评论数
+     */
+    private int commentNum;
+    /**
+     * 点赞数
+     */
+    private int likeNum;
+    /**
+     * 收藏数
+     */
+    private int collectNum;
 
     public Post() {
+    }
+
+    public int getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(int sessionId) {
+        this.sessionId = sessionId;
     }
 
     public int getId() {

@@ -2,31 +2,48 @@ package com.gameclub.community.po;
 
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * @ClassName User
- * @Description TODO
+ * @Description 用户
  * @Author YCDN
  * @Date 2022/3/1 21:31
  * @Version 1.0
  */
 public class User {
     private int id;
+    /**
+     * 用户昵称
+     */
     private String nickname;
+    /**
+     * 密码
+     */
     private String password;
+    /**
+     * 邮箱
+     */
     private String email;
+    /**
+     * 电话
+     */
     private String phone;
+    /**
+     * 头像
+     */
     private String avatar;
+    /**
+     * 创建时间
+     */
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date modifyTime;
+
 
     public User() {
     }
 
-    public User(int id, String nickname, String password, String email, String phone, String avatar, Date createTime, Date modifyTime) {
+    public User(int id, String nickname, String password, String email, String phone, String avatar, Date createTime) {
         this.id = id;
         this.nickname = nickname;
         this.password = password;
@@ -34,7 +51,6 @@ public class User {
         this.phone = phone;
         this.avatar = avatar;
         this.createTime = createTime;
-        this.modifyTime = modifyTime;
     }
 
     public int getid() {
@@ -93,13 +109,6 @@ public class User {
         this.createTime = createTime;
     }
 
-    public Date getModifyTime() {
-        return modifyTime;
-    }
-
-    public void setModifyTime(Date modifyTime) {
-        this.modifyTime = modifyTime;
-    }
 
     @Override
     public String toString() {
@@ -111,7 +120,6 @@ public class User {
                 ", phone='" + phone + '\'' +
                 ", avatar='" + avatar + '\'' +
                 ", createTime=" + createTime +
-                ", modifyTime=" + modifyTime +
                 '}';
     }
 }
