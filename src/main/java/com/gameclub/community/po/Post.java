@@ -23,17 +23,13 @@ public class Post {
      */
     private String title;
     /**
-     * 帖子类型
+     * 帖子类型（版块）
      */
     private int postTypeId;
     /**
      * 标签类型
      */
     private List<Integer> tagId;
-    /**
-     * 版块名称
-     */
-    private int sessionId;
     /**
      * 正文
      */
@@ -68,14 +64,6 @@ public class Post {
     private int collectNum;
 
     public Post() {
-    }
-
-    public int getSessionId() {
-        return sessionId;
-    }
-
-    public void setSessionId(int sessionId) {
-        this.sessionId = sessionId;
     }
 
     public int getId() {

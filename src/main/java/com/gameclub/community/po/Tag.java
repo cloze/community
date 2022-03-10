@@ -1,7 +1,5 @@
 package com.gameclub.community.po;
 
-import java.util.Date;
-
 /**
  * @ClassName Tag
  * @Description 标签

@@ -12,115 +12,74 @@ import java.util.Date;
 public class Notification {
     private int id;
     /**
-     * 评论者
+     * 发消息的人
      */
-    private String commenter;
+    private int senderId;
     /**
-     * 评论的帖子
+     * 收到的人
      */
-    private String comTargetName;
+    private int receiverId;
     /**
-     * 点赞者
+     * 内容
      */
-    private String liker;
+    private String content;
     /**
-     * 点赞的帖子
+     * 发送时间
      */
-    private String likeTargetName;
+    private Date createTime;
     /**
-     * 收藏者
+     * 更新时间
      */
-    private String collector;
-    /**
-     * 收藏的帖子
-     */
-    private String colTargetName;
-    /**
-     * 评论时间
-     */
-    private Date commentTime;
-    /**
-     * 点赞时间
-     */
-    private Date likeTime;
-    /**
-     * 收藏时间
-     */
-    private Date collectTime;
-
+    private Date updateTime;
 
     public Notification() {
     }
 
-    public String getCommenter() {
-        return commenter;
+    public int getId() {
+        return id;
     }
 
-    public void setCommenter(String commenter) {
-        this.commenter = commenter;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getComTargetName() {
-        return comTargetName;
+    public int getSenderId() {
+        return senderId;
     }
 
-    public void setComTargetName(String comTargetName) {
-        this.comTargetName = comTargetName;
+    public void setSenderId(int senderId) {
+        this.senderId = senderId;
     }
 
-    public String getLiker() {
-        return liker;
+    public int getReceiverId() {
+        return receiverId;
     }
 
-    public void setLiker(String liker) {
-        this.liker = liker;
+    public void setReceiverId(int receiverId) {
+        this.receiverId = receiverId;
     }
 
-    public String getLikeTargetName() {
-        return likeTargetName;
+    public String getContent() {
+        return content;
     }
 
-    public void setLikeTargetName(String likeTargetName) {
-        this.likeTargetName = likeTargetName;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getCollector() {
-        return collector;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCollector(String collector) {
-        this.collector = collector;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public String getColTargetName() {
-        return colTargetName;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    public void setColTargetName(String colTargetName) {
-        this.colTargetName = colTargetName;
-    }
-
-    public Date getCommentTime() {
-        return commentTime;
-    }
-
-    public void setCommentTime(Date commentTime) {
-        this.commentTime = commentTime;
-    }
-
-    public Date getLikeTime() {
-        return likeTime;
-    }
-
-    public void setLikeTime(Date likeTime) {
-        this.likeTime = likeTime;
-    }
-
-    public Date getCollectTime() {
-        return collectTime;
-    }
-
-    public void setCollectTime(Date collectTime) {
-        this.collectTime = collectTime;
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }

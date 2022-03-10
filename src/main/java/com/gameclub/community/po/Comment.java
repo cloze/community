@@ -17,7 +17,7 @@ public class Comment {
      */
     private String content;
     /**
-     * 帖子
+     * 回复的帖子
      */
     private int postId;
     /**
@@ -32,32 +32,13 @@ public class Comment {
      * 点赞数
      */
     private int likeNum;
-
     /**
-     * 头像
+     * 回复的用户
      */
-    private String avatar;
-
-    /**
-     * 昵称
-     */
-    private String nickName;
-
-    /**
-     * 版块
-     */
-    private int sessionId;
+    private int userId;
 
 
     public Comment() {
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
     }
 
     public int getId() {
@@ -74,14 +55,6 @@ public class Comment {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
     }
 
     public String getContent() {
@@ -116,11 +89,11 @@ public class Comment {
         this.likeNum = likeNum;
     }
 
-    public int getSessionId() {
-        return sessionId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setSessionId(int sessionId) {
-        this.sessionId = sessionId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }
