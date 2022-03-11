@@ -20,7 +20,7 @@ create table bbs_user
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
     create_id   int          default 0,
-    update_id   int          default 0,
+    update_id   int          default 0
 );
 
 
@@ -35,7 +35,7 @@ create table bbs_user_attention(
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
     create_id   int          default 0,
-    update_id   int          default 0,
+    update_id   int          default 0
 );
 
 
@@ -55,16 +55,16 @@ create table bbs_post
     --类型（版块）
     type_id int default 0,
     --浏览数
-    View int default 0,
+    view_count int default 0,
     --点赞数
-    Like int default 0,
+    like_count int default 0,
     --收藏数
-    Collect int default 0,
+    collect int default 0,
     -- 必要字段
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
     create_id   int          default 0,
-    update_id   int          default 0,
+    update_id   int          default 0
 );
 -- 类型（版块）
 create table bbs_post_type
@@ -75,7 +75,7 @@ create table bbs_post_type
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
     create_id   int          default 0,
-    update_id   int          default 0,
+    update_id   int          default 0
 );
 --视频
 create table bbs_video
@@ -94,20 +94,20 @@ create table bbs_video
     --类型（版块）
     type_id int  default 0,
     --浏览数
-    View int  default 0,
+    view_count int  default 0,
     --点赞数
-    Like int  default 0,
+    like_count int  default 0,
     --收藏数
-    Collect int  default 0,
+    collect int  default 0,
     --文件大小
-    Size varchar(255) default "",
+    video_size varchar(255) default "",
     --文件类型
     type varchar(255) default "",
     -- 必要字段
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
     create_id   int          default 0,
-    update_id   int          default 0,
+    update_id   int          default 0
 );
 
 
@@ -121,7 +121,7 @@ create table bbs_post_tag
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
     create_id   int          default 0,
-    update_id   int          default 0,
+    update_id   int          default 0
 );
 
 -- =======================================================
@@ -151,7 +151,7 @@ create table bbs_role
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
     create_id   int          default 0,
-    update_id   int          default 0,
+    update_id   int          default 0
 );
 
 
@@ -165,7 +165,7 @@ create table bbs_role_permission
     update_time   datetime     default "2021-10-01 12:00:00",
     create_time   datetime     default "2021-10-01 12:00:00",
     create_id     int          default 0,
-    update_id     int          default 0,
+    update_id     int          default 0
 );
 
 
@@ -184,7 +184,7 @@ create table bbs_permission
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
     create_id   int          default 0,
-    update_id   int          default 0,
+    update_id   int          default 0
 );
 
 
@@ -205,7 +205,7 @@ create table bbs_im_notification(
    update_time datetime     default "2021-10-01 12:00:00",
    create_time datetime     default "2021-10-01 12:00:00",
    create_id   int          default 0,
-   update_id   int          default 0,
+   update_id   int          default 0
 );
 
 
@@ -225,5 +225,5 @@ create table bbs_comment
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
     create_id   int          default 0,
-    update_id   int          default 0,
+    update_id   int          default 0
 );
