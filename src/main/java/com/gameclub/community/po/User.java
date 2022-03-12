@@ -14,6 +14,10 @@ import java.util.Date;
 public class User {
     private int id;
     /**
+     * 用户名字
+     */
+    private String userName;
+    /**
      * 用户昵称
      */
     private String nickname;
@@ -39,26 +43,47 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+
+    private Integer createId;
+
+    private Integer updateId;
+
 
     public User() {
     }
 
-    public User(int id, String nickname, String password, String email, String phone, String avatar, Date createTime) {
+    public User(int id, String userName, String nickname, String password, String email, String phone, String avatar, Date createTime, Date updateTime, Integer createId, Integer updateId) {
         this.id = id;
+        this.userName = userName;
         this.nickname = nickname;
         this.password = password;
         this.email = email;
         this.phone = phone;
         this.avatar = avatar;
         this.createTime = createTime;
+        this.updateTime = updateTime;
+        this.createId = createId;
+        this.updateId = updateId;
     }
 
-    public int getid() {
+    public int getId() {
         return id;
     }
 
-    public void setid(int id) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getNickname() {
@@ -109,6 +134,29 @@ public class User {
         this.createTime = createTime;
     }
 
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Integer getCreateId() {
+        return createId;
+    }
+
+    public void setCreateId(Integer createId) {
+        this.createId = createId;
+    }
+
+    public Integer getUpdateId() {
+        return updateId;
+    }
+
+    public void setUpdateId(Integer updateId) {
+        this.updateId = updateId;
+    }
 
     @Override
     public String toString() {

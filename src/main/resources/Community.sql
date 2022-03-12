@@ -59,7 +59,7 @@ create table bbs_post
     --点赞数
     like_count int default 0,
     --收藏数
-    collect int default 0,
+    collect_count int default 0,
     -- 必要字段
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
@@ -77,7 +77,7 @@ create table bbs_post_type
     create_id   int          default 0,
     update_id   int          default 0
 );
---视频
+-- 视频
 create table bbs_video
 (
     id          int primary key auto_increment,
@@ -98,7 +98,7 @@ create table bbs_video
     --点赞数
     like_count int  default 0,
     --收藏数
-    collect int  default 0,
+    collect_count int  default 0,
     --文件大小
     video_size varchar(255) default "",
     --文件类型
@@ -220,7 +220,7 @@ create table bbs_comment
     -- 回复所在帖子ID
     post_id     int          default 0,
     --点赞数
-    like int                 default 0,
+    like_count int                 default 0,
     -- 必要字段
     update_time datetime     default "2021-10-01 12:00:00",
     create_time datetime     default "2021-10-01 12:00:00",
