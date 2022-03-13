@@ -2,8 +2,10 @@ spring:
   datasource:
     url: jdbc:mysql://114.55.135.31/communitydb
     username: root
-    password: 123456
+    password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations:
+    - classpath*:com/gameclub/community/mapper/xml/*.xml
