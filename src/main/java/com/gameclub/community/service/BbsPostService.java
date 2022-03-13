@@ -15,9 +15,14 @@ import javax.servlet.http.HttpServletRequest;
  */
 public interface BbsPostService extends IService<BbsPost> {
     String insertNewPost(String title, String content, HttpServletRequest request);
+
     String getSomePostNew(int pageIndex, HttpServletRequest request);
-    String getSpecificArticleById(int postId, HttpServletRequest request);
+
     String updatePost(Integer postId, String newTitle, String newContent, HttpServletRequest request);
+
+    String getPostCollectedBy(Integer collectId);
+
+    String deletePost(Integer postId, HttpServletRequest request);
 
 
 }

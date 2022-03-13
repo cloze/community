@@ -4,11 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
@@ -17,31 +14,26 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author JWT
- * @since 2022-03-12
+ * @since 2022-03-13
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@NoArgsConstructor
-@AllArgsConstructor
-public class BbsPost implements Serializable {
+public class BbsCollect implements Serializable {
 
     private static final long serialVersionUID=1L;
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private String title;
+    private Integer postId;
 
-    private String description;
+    /**
+     * 被评价的对象类别，0代表回答，1代表文章，2代表问题
+     */
+    private Integer collectType;
 
-    private String content;
-
-    private Integer tagId;
-
-    private Integer typeId;
-
-    private Integer viewCount;
+    private Integer userId;
 
     private Date updateTime;
 
@@ -51,7 +43,5 @@ public class BbsPost implements Serializable {
 
     private Integer updateId;
 
-    public BbsPost(int i, String title, String content, Integer uid, Object o, Object o1, Object o2) {
 
-    }
 }

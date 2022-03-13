@@ -3,10 +3,8 @@ package com.gameclub.community.controller;
 
 import com.gameclub.community.common.lang.Result;
 import com.gameclub.community.entity.BbsPost;
-import com.gameclub.community.po.Post;
 import com.gameclub.community.service.BbsPostService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -33,17 +31,38 @@ public class BbsPostController {
      * @return
      */
     @PostMapping("/newPost")
-    public String insertNewArticle(@RequestParam("title") String title,
-                                   @RequestParam("content") String content,
+    public String insertNewPost(@RequestParam("title") String title,
+                                @RequestParam("content") String content,
                                    HttpServletRequest request) {
         return bbsPostService.insertNewPost(title, content, request);
     }
+
+    /**
+     * 更新帖子
+     * @param editId
+     * @param newTitle
+     * @param newContent
+     * @param request
+     * @return
+     */
     @PostMapping("/updatePost")
-    public String updateArticle(@RequestParam("editId") String editId,
-                                @RequestParam("newTitle") String newTitle,
-                                @RequestParam("newContent") String newContent,
-                                HttpServletRequest request) {
+    public String updatePost(@RequestParam("editId") String editId,
+                             @RequestParam("newTitle") String newTitle,
+                             @RequestParam("newContent") String newContent,
+                             HttpServletRequest request) {
         return bbsPostService.updatePost(Integer.parseInt(editId), newTitle, newContent, request);
+    }
+
+    /**
+     * 删除帖子
+     * @param postId
+     * @param request
+     * @return
+     */
+    @PostMapping("/deletePost")
+    public String deleteArticle(@RequestParam String postId,
+                                HttpServletRequest request) {
+        return bbsPostService.deletePost(Integer.parseInt(postId), request);
     }
     /**
      * 根据ID获取数据库中的数据
@@ -85,6 +104,15 @@ public class BbsPostController {
         }
     }
 
+    /**
+     * 通过收藏者id得到收藏的帖子
+     * @param collectId
+     * @return
+     */
+    @GetMapping("/getPostCollectedBy")
+    public String getPostCollectedBy(@RequestParam String collectId) {
+        return bbsPostService.getPostCollectedBy(Integer.parseInt(collectId));
+    }
 
 
 }
