@@ -17,7 +17,8 @@ import javax.servlet.http.HttpServletRequest;
  * @author JWT
  * @since 2022-03-12
  */
-@RestController("/api/bbs/post")
+@RestController
+@RequestMapping("/api/bbs/post")
 public class BbsPostController {
 
     @Autowired
